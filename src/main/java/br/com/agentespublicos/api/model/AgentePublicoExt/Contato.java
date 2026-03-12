@@ -1,4 +1,4 @@
-package br.com.agentespublicos.api.model;
+package br.com.agentespublicos.api.model.AgentePublicoExt;
 
 import jakarta.persistence.Embeddable;
 
@@ -12,7 +12,7 @@ public class Contato {
     private String facebook;
     private String twitter;
     private String instagram;
-    
+
     public String getTelefone() {
         return telefone;
     }

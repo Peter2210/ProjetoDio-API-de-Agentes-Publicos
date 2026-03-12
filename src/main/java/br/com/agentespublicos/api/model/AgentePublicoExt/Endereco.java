@@ -1,4 +1,4 @@
-package br.com.agentespublicos.api.model;
+package br.com.agentespublicos.api.model.AgentePublicoExt;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
