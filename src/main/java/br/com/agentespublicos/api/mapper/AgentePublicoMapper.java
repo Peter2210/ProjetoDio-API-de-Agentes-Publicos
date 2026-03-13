@@ -6,8 +6,9 @@ import br.com.agentespublicos.api.dto.AgentePublicoDTO;
 import br.com.agentespublicos.api.model.AgentePublico;
 
 @Component
-public class AgentePublicoMapper {
+public class AgentePublicoMapper implements BaseMapper<AgentePublico, AgentePublicoDTO> {
 
+    @Override
     public AgentePublicoDTO toDTO(AgentePublico agente) {
 
         AgentePublicoDTO dto = new AgentePublicoDTO();
@@ -21,16 +22,10 @@ public class AgentePublicoMapper {
         return dto;
     }
 
+    @Override
     public AgentePublico toEntity(AgentePublicoDTO dto) {
-
-        AgentePublico agente = new AgentePublico() {};
-
-        agente.setId(dto.getId());
-        agente.setNome(dto.getNome());
-        agente.setCpf(dto.getCpf());
-        agente.setDataNascimento(dto.getDataNascimento());
-        agente.setEstadoCivil(dto.getEstadoCivil());
-
-        return agente;
-    }
+        throw new UnsupportedOperationException(
+            "AgentePublico é abstrato. Use um tipo concreto como Deputado ou Senador."
+    );
+}
 }
