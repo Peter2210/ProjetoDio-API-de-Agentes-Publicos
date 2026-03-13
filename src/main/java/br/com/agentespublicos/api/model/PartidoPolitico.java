@@ -22,7 +22,7 @@ public class PartidoPolitico {
 
     private Integer numero;
 
-    @OneToMany(mappedBy = "partido")
+    @OneToMany
     private Set<AgentePublico> agentesPublicos = new HashSet<>();
 
     public Long getId() {
